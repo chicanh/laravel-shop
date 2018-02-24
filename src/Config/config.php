@@ -19,7 +19,7 @@ return [
     | Shop name.
     |
     */
-    'name' => 'Laravel Shop',
+    'name' => 'QRM Shop',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ return [
     | Update the model if it is in a different namespace.
     |
     */
-    'cart' => 'App\Cart',
+    'cart' => 'Amsgames\LaravelShop\Models\ShopCartModel',
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     | Update the model if it is in a different namespace.
     |
     */
-    'order' => 'App\Order',
+    'order' => 'Amsgames\LaravelShop\Models\ShopOrderModel',
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +82,7 @@ return [
     | Update the model if it is in a different namespace.
     |
     */
-    'item' => 'App\Item',
+    'item' => 'Amsgames\LaravelShop\Models\ShopItemModel',
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +103,7 @@ return [
     | Update the model if it is in a different namespace.
     |
     */
-    'transaction' => 'App\Transaction',
+    'transaction' => 'Amsgames\LaravelShop\Models\ShopTransactionModel',
 
     /*
     |--------------------------------------------------------------------------
@@ -124,7 +124,7 @@ return [
     | Update the model if it is in a different namespace.
     |
     */
-    'coupon' => 'App\Coupon',
+    'coupon' => 'Amsgames\LaravelShop\Models\Coupon',
 
     /*
     |--------------------------------------------------------------------------
@@ -279,5 +279,17 @@ return [
     |
     */
     'callback_redirect_route' => '/',
+    
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => Amsgames\LaravelShop\Models\User::class,
+            'table' => 'users',
+        ],
 
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
+    ],
 ];
