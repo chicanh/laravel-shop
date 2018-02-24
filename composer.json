@@ -32,5 +32,5 @@
             "Amsgames\\LaravelShop\\": "src"
         }
     },
-    "minimum-stability": "v0.2.12a"
+    "minimum-stability": "dev"
 }
