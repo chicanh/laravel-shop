@@ -1207,3 +1207,7 @@ This package's architecture and design was inpired by the **Zizaco/entrust** pac
 
 ## Change Log
 * [v0.2.8](https://github.com/amsgames/laravel-shop/releases/tag/v0.2.8)
+
+Pull mereged
+
+https://github.com/amsgames/laravel-shop/pull/62
