@@ -282,8 +282,6 @@ return [
     
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => Amsgames\LaravelShop\Models\User::class,
             'table' => 'users',
         ],
 

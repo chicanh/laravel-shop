@@ -25,6 +25,8 @@ use Amsgames\LaravelShop\Events\OrderCompleted;
 use Amsgames\LaravelShop\Events\OrderPlaced;
 use Amsgames\LaravelShop\Events\OrderStatusChanged;
 
+use Illuminate\Foundation\Application as App;
+
 class LaravelShop
 {
     /**
@@ -72,7 +74,7 @@ class LaravelShop
      *
      * @return void
      */
-    public function __construct($app)
+    public function __construct(App $app)
     {
         $this->app              = $app;
         static::$gatewayKey     = $this->getGateway();

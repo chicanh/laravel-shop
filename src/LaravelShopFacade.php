@@ -23,6 +23,6 @@ class LaravelShopFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'shop';
+        return LaravelShop::class;
     }
 }

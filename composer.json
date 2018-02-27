@@ -1,5 +1,5 @@
 {
-    "name": "baklysystems/laravel-shop",
+    "name": "chicanh/laravel-shop",
     "description": "This is just an update for amsgames/laravel-shop to support 5.4 as they don't update it anymore. Package set to provide shop or e-commerce functionality (such as CART, ORDERS, TRANSACTIONS and ITEMS) to Laravel for customizable builds.",
     "license": "MIT",
     "keywords": ["shop","laravel","cart","orders","transactions","paypal","e-commerce","shopping cart","ecommerce","shopping"],
@@ -16,12 +16,15 @@
         {
             "name": "Mostafa Elbakly",
             "email": "elbakly@gmail.com"
+        },
+        {
+            "name": "Canh Chi",
+            "email": "canhlc@davido.vn"
         }
     ],
     "require": {
-        "php": ">=5.5.9",
-        "illuminate/console": "~5.0",
-        "illuminate/support": "~5.0",
+        "php": ">=7.0",
+        "laravel/framework": "5.5.28",
         "amsgames/laravel-shop-gateway-paypal": "1.0.*"
     },
     "autoload": {
@@ -30,6 +33,16 @@
         ],
         "psr-4": {
             "Amsgames\\LaravelShop\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amsgames\\LaravelShop\\LaravelShopProvider"
+            ],
+            "aliases": {
+                "Shop": "Amsgames\\LaravelShop\\LaravelShopFacade"
+            }
         }
     },
     "minimum-stability": "dev"
