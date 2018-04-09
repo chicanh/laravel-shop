@@ -144,7 +144,7 @@ return [
     | Currency to use within shop.
     |
     */
-    'currency' => 'USD',
+    'currency' => 'VND',
 
     /*
     |--------------------------------------------------------------------------
@@ -154,7 +154,7 @@ return [
     | Currency symbol to use within shop.
     |
     */
-    'currency_symbol' => '$',
+    'currency_symbol' => 'đ',
 
     /*
     |--------------------------------------------------------------------------
