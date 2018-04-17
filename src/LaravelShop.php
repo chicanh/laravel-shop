@@ -339,19 +339,21 @@ class LaravelShop
     
     public static function forceOrderCompleted($order, $txType, $reason = null, $txToken = null)
     {
-        $statusCode = $order->statusCode;
-        $order->statusCode = 'completed';
-        $order->save();
-        // Create transaction
-        $order->placeTransaction(
-            $txType,
-            uniqid(),
-            $reason,
-            $txToken
-        );
-        // Fire event
-        event(new OrderCompleted($order->id));
-        static::checkStatusChange($order, $statusCode);
-        return $order;
+        if($order->statusCode != 'completed') {
+            $statusCode = $order->statusCode;
+            $order->statusCode = 'completed';
+            $order->save();
+            // Create transaction
+            $order->placeTransaction(
+                $txType,
+                uniqid(),
+                $reason,
+                $txToken
+            );
+            // Fire event
+            event(new OrderCompleted($order->id));
+            static::checkStatusChange($order, $statusCode);
+            return $order;
+        }
     }
 }
